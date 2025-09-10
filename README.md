@@ -67,6 +67,9 @@ rag_cv/
 ├── cv_chat.py           # Module chat với CV
 ├── cv_scoring.py        # Module chấm điểm CV
 ├── text_processing.py   # Xử lý văn bản CV (tách sections, làm sạch text)
+├── vector_store.py      # Vector store và retrieval logic
+├── config.py            # Cấu hình ứng dụng
+├── prompts.py           # Template prompts cho LLM
 ├── requirements.txt     # Dependencies
 ├── .env                 # Environment variables (tạo từ .env.example)
 └── README.md           # Tài liệu này
@@ -78,6 +81,9 @@ rag_cv/
 - **`cv_chat.py`**: Xử lý logic chat với CV (embeddings, retrieval, QA)
 - **`cv_scoring.py`**: Xử lý logic chấm điểm CV (phân tích yêu cầu, scoring, ranking)
 - **`text_processing.py`**: Các function xử lý text cơ bản (tách sections, làm sạch PDF)
+- **`vector_store.py`**: Logic tạo và quản lý vector store, FAISS operations
+- **`config.py`**: Cấu hình các tham số hệ thống (models, retriever settings)
+- **`prompts.py`**: Template prompts cho các tác vụ LLM (QA, scoring, analysis)
 
 ## 🔧 Cấu hình
 
@@ -193,8 +199,8 @@ Kỹ năng cần thiết:
 
 ## 📊 Hiệu suất
 
-- **Embedding Model**: text-embedding-3-small (nhanh, chính xác)
-- **LLM Model**: gpt-4o-mini (cân bằng tốc độ và chất lượng)
+- **Embedding Model**: text-embedding-3-small 
+- **LLM Model**: gpt-4o-mini 
 - **Retrieval**: Hybrid approach tối ưu độ chính xác
 - **Caching**: Session state caching để tránh xử lý lại
 
