@@ -1,6 +1,7 @@
 """
 Cấu hình cho ứng dụng CV RAG
 """
+
 import os
 from dotenv import load_dotenv
 

@@ -1,6 +1,7 @@
 """
 template prompt cho ứng dụng CV RAG
 """
+
 from langchain.prompts import PromptTemplate
 
 

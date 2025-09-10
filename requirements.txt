@@ -15,5 +15,3 @@ sentence-transformers>=2.2.2
 # Environment and utilities
 python-dotenv>=1.0.0
 
-# Optional: For better performance
-# faiss-gpu>=1.7.4  # Uncomment if you have CUDA support

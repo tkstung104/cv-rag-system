@@ -1,6 +1,7 @@
 """
 Tiền xử lý văn bản cho tài liệu CV
 """
+
 import re
 from typing import List, Tuple
 from config import CV_SECTION_KEYWORDS

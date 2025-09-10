@@ -147,6 +147,7 @@ dmypy.json
 ehthumbs.db
 Thumbs.db
 
+
 # Project specific
 *.pdf
 uploads/
