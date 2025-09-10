@@ -12,6 +12,7 @@ def main():
     # Tạo tabs
     tab1, tab2 = st.tabs(["Chat with CV", "CV Scoring"])
 
+    # Tạo session state để lưu trữ hash và hybrid retriever
     if 'pdf_hash' not in st.session_state:
         st.session_state.pdf_hash = None
     if 'hybrid_retriever' not in st.session_state:
