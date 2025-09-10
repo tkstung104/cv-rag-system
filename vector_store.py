@@ -1,6 +1,7 @@
 """
 Thiết lập vector store và truy xuất thông tin cho tài liệu CV
 """
+
 import fitz
 import hashlib
 from typing import List
@@ -75,7 +76,7 @@ def create_chunks_from_documents(documents: List[Document]) -> List[Document]:
 
 def create_hybrid_retriever(all_chunks: List[Document]) -> EnsembleRetriever:
     """
-    Tạo hybrid retriever kết hợp vector và BM25 retrieval
+    Tạo hybrid retriever kết hợp vector và BM25 retrieval.
     """
     # Tạo embeddings
     embeddings = OpenAIEmbeddings(model=EMBEDDING_MODEL)
