@@ -2,10 +2,20 @@ from dotenv import load_dotenv
 import streamlit as st
 from cv_chat import process_cvs_for_chat
 from cv_scoring import process_cvs_for_scoring
+import os
 
 
 def main():
     load_dotenv()
+
+    # Get API key from environment or Streamlit secrets
+    api_key = os.getenv("OPENAI_API_KEY") or st.secrets.get("OPENAI_API_KEY")
+    
+    if not api_key:
+        st.error("❌ OpenAI API Key not found!")
+        st.info("Please add your OpenAI API key in the Streamlit Cloud secrets or .env file")
+        return
+
     st.set_page_config(page_title="CV Analysis & Scoring System")
     st.header("CV Analysis & Scoring System")
     
